@@ -1,5 +1,5 @@
-import {AbstractLinks} from './links'
-import {SemVer} from 'semver'
+import { AbstractLinks } from './links'
+import { SemVer } from 'semver'
 
 // # Dictionary of known cuda versions and thier download URLS, which do not follow a consistent pattern :(
 // $CUDA_KNOWN_URLS = @{
@@ -24,6 +24,10 @@ export class WindowsLinks extends AbstractLinks {
   private static _instance: WindowsLinks
 
   private cudaVersionToNetworkUrl: Map<string, string> = new Map([
+    [
+      '12.5.0',
+      'https://developer.download.nvidia.com/compute/cuda/12.5.0/network_installers/cuda_12.5.0_windows_network.exe'
+    ],
     [
       '12.4.1',
       'https://developer.download.nvidia.com/compute/cuda/12.4.1/network_installers/cuda_12.4.1_windows_network.exe'

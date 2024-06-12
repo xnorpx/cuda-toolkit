@@ -1,4 +1,4 @@
-import {AbstractLinks} from './links'
+import { AbstractLinks } from './links'
 
 /**
  * Singleton class for windows links.
@@ -12,6 +12,10 @@ export class LinuxLinks extends AbstractLinks {
     super()
     // Map of cuda SemVer version to download URL
     this.cudaVersionToURL = new Map([
+      [
+        '12.5.0',
+        'https://developer.download.nvidia.com/compute/cuda/12.5.0/local_installers/cuda_12.5.0_555.42.02_linux.run'
+      ],
       [
         '12.4.1',
         'https://developer.download.nvidia.com/compute/cuda/12.4.1/local_installers/cuda_12.4.1_550.54.15_linux.run'
